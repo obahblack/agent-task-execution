@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "tickets": [
+    {
+      "id": "ticket-001",
+      "title": "Define the login API contract",
+      "status": "Draft",
+      "mode": "Solo",
+      "assigned_agent": null,
+      "path": "tasks/ticket-001",
+      "depends_on": [],
+      "blocker": null
+    },
+    {
+      "id": "ticket-002",
+      "title": "Implement the login API",
+      "status": "Draft",
+      "mode": "Solo",
+      "assigned_agent": null,
+      "path": "tasks/ticket-002",
+      "depends_on": [
+        {
+          "ticket": "ticket-001",
+          "condition": "done"
+        }
+      ],
+      "blocker": null
+    },
+    {
+      "id": "ticket-003",
+      "title": "Build the login interface",
+      "status": "Draft",
+      "mode": "Solo",
+      "assigned_agent": null,
+      "path": "tasks/ticket-003",
+      "depends_on": [
+        {
+          "ticket": "ticket-001",
+          "condition": "done"
+        }
+      ],
+      "blocker": null
+    },
+    {
+      "id": "ticket-004",
+      "title": "Integrate the login flow",
+      "status": "Draft",
+      "mode": "Solo",
+      "assigned_agent": null,
+      "path": "tasks/ticket-004",
+      "depends_on": [
+        {
+          "ticket": "ticket-002",
+          "condition": "done"
+        },
+        {
+          "ticket": "ticket-003",
+          "condition": "done"
+        }
+      ],
+      "blocker": null
+    },
+    {
+      "id": "ticket-005",
+      "title": "Verify login regression behavior",
+      "status": "Draft",
+      "mode": "Solo",
+      "assigned_agent": null,
+      "path": "tasks/ticket-005",
+      "depends_on": [
+        {
+          "ticket": "ticket-004",
+          "condition": "done"
+        }
+      ],
+      "blocker": null
+    }
+  ]
+}
